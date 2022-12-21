@@ -5,7 +5,7 @@ import app from "./src/server.js";
 // const app = require("./src/server.js");
 import "./db.js";
 
-const port = 3300;
+const port = 3001;
 
 app.listen(process.env.PORT || port, () => {
     console.log(`App listening on http://localhost:${port}`);
