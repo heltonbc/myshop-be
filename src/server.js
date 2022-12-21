@@ -133,4 +133,8 @@ app.post("/products/sell", async (req, res) => {
     return res.status(200).json({ message: "Success" });
 });
 
+/* app.listen(process.env.PORT || port, () => {
+    console.log(`App listening on http://localhost:${port}`);
+}); */
+
 export default app;
