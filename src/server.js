@@ -22,6 +22,7 @@ const storage = multer.diskStorage({
         cb(null, `${newFileName}${fileExtension}`);
     },
 });
+
 const uploadMiddleware = multer({ storage });
 
 app.use(cors());
@@ -63,6 +64,7 @@ app.get("/products/:id", async (req, res) => {
 app.use("/uploads", express.static("uploads")); //rota estática que irá recuperar arquivo do backend
 app.use(authMiddleware);
 
+// for create users
 app.post("/users", async (req, res) => {
     const { name, email, password } = req.body;
     const user = { name, email, password };
@@ -131,8 +133,8 @@ app.post("/products/sell", async (req, res) => {
     return res.status(200).json({ message: "Success" });
 });
 
-app.listen(process.env.PORT || port, () => {
+/* app.listen(process.env.PORT || port, () => {
     console.log(`App listening on http://localhost:${port}`);
-});
+}); */
 
-/*  */
+export default app;
