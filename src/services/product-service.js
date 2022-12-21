@@ -2,7 +2,7 @@ import { ObjectId } from "mongodb";
 import ProductModel from "../schema/product-schema.js";
 
 export class ProductService {
-    constructor() {}
+    //constructor() {}
 
     async create(product) {
         await ProductModel.create(product);
