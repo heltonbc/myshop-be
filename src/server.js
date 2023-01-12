@@ -30,7 +30,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", async (req, res) => {
-    res.send("Imagine Shop");
+    res.send("MyShop");
 });
 
 app.post("/login", async (req, res) => {
@@ -133,8 +133,6 @@ app.post("/products/sell", async (req, res) => {
     return res.status(200).json({ message: "Success" });
 });
 
-/* app.listen(process.env.PORT || port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log(`App listening on http://localhost:${port}`);
-}); */
-
-export default app;
+});

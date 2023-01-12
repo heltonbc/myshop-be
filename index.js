@@ -1,4 +1,4 @@
-import "dotenv/config";
+/* import "dotenv/config";
 
 import app from "./src/server.js";
 
@@ -9,4 +9,4 @@ const port = 3001;
 
 app.listen(process.env.PORT || port, () => {
     console.log(`App listening on http://localhost:${port}`);
-});
+}); */
